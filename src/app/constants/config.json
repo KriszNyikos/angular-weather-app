@@ -1,0 +1,4 @@
+{
+    "WEATHER_API_BASE_URL": "http://api.weatherapi.com/v1/",
+    "WEATHER_API_KEY": "f2066b5178ae4d6b819160234230308"
+}

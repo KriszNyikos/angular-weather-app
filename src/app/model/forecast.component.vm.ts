@@ -1,4 +1,4 @@
-export interface ForecastVm {
+export interface ForecastVM {
     days: ForecastDay[]
 }
 

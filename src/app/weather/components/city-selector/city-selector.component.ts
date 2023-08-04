@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Subscription, debounceTime, distinctUntilChanged } from 'rxjs';
-import { CitySelectorVm } from 'src/app/model/city-selector.component.vm';
+import { CitySelectorVM } from 'src/app/model/city-selector.component.vm';
 
 @Component({
   selector: 'app-city-selector',
@@ -10,7 +10,7 @@ import { CitySelectorVm } from 'src/app/model/city-selector.component.vm';
 })
 export class CitySelectorComponent implements OnInit, OnDestroy{
 
-  @Input() cityList: CitySelectorVm = {
+  @Input() cityList: CitySelectorVM = {
     availableCities: [
       {name: 'London', country: 'UK', coordinates: "51.52,-0.11"},
     ]

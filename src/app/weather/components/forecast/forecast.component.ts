@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ForecastVm } from 'src/app/model/forecast-vm';
+import { ForecastVM } from 'src/app/model/forecast.component.vm';
 
 @Component({
   selector: 'app-forecast',
@@ -7,7 +7,7 @@ import { ForecastVm } from 'src/app/model/forecast-vm';
   styleUrls: ['./forecast.component.scss'],
 })
 export class ForecastComponent {
-  @Input() public vm: ForecastVm = {
+  @Input() public vm: ForecastVM = {
     days: [
       {
         date: '2023-08-04',

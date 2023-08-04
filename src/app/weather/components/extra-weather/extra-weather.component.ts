@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ExtraWeatherDataVm } from 'src/app/model/extra-weather-vm';
+import { ExtraWeatherDataVM } from 'src/app/model/extra-weather.compoennt.vm';
 
 @Component({
   selector: 'app-extra-weather',
@@ -7,7 +7,7 @@ import { ExtraWeatherDataVm } from 'src/app/model/extra-weather-vm';
   styleUrls: ['./extra-weather.component.scss']
 })
 export class ExtraWeatherComponent {
-  @Input() vm: ExtraWeatherDataVm = {
+  @Input() vm: ExtraWeatherDataVM = {
     humidiy: 77,
     pressureMb: 1017.0,
     windSpeedKph: 14,

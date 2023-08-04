@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CurrentWeatherVM } from 'src/app/model/current-weather-vm';
+import { CurrentWeatherVM } from 'src/app/model/current-weather.component.vm';
 
 @Component({
   selector: 'app-current-weather',

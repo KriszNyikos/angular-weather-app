@@ -1,4 +1,4 @@
-export interface CitySelectorVm {
+export interface CitySelectorVM {
     availableCities: CitySelectorProps[];
 }
 

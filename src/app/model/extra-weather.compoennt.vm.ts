@@ -1,4 +1,4 @@
-export interface ExtraWeatherDataVm {
+export interface ExtraWeatherDataVM {
     humidiy: number,
     pressureMb: number,
     windSpeedKph: number,

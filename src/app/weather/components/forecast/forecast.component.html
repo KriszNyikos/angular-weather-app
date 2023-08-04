@@ -1,0 +1,20 @@
+<div>
+    <div *ngFor="let day of vm.days">
+        {{day.date}}
+        <div *ngFor="let hour of day.hourForecast">
+            <div class="flex">
+                <div>
+                    {{hour.time}}
+                </div>
+                <div>
+                    {{hour.tempCelsius}}
+                </div>
+                <div>
+                    <img [src]="hour.iconUrl" alt="" srcset="">
+                    {{hour.description}}
+                </div>
+            </div>
+        </div>
+        ---
+    </div>  
+</div>

@@ -3,10 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-
-
-
-
+import { WeatherModule } from './weather/weather.module';
 
 @NgModule({
   declarations: [
@@ -14,9 +11,9 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    WeatherModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

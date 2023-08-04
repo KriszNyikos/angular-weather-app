@@ -1,0 +1,13 @@
+<div>
+    <div class="relative">
+        <input type="text" [formControl]="cityNameControl" (keydown.enter)="onEnterCityNameHandler()">
+        <div *ngIf="cityList" class="absolute w-full bg-white rounded">
+            <div *ngFor="let city of cityList.availableCities" (click)="onClickCityNameHandler(city.coordinates)">
+                <div>
+                    {{city.name}}
+                    {{city.country}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

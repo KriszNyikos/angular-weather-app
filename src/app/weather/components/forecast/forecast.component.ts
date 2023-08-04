@@ -11,37 +11,19 @@ export class ForecastComponent {
     days: [
       {
         date: '2023-08-04',
-        hourForecast: [
-          {
-            time: '22:00',
-            tempCelsius: 16,
-            iconUrl: "http://cdn.weatherapi.com/weather/64x64/day/116.png",
-            description: "Partly cloudy"
-          },
-          {
-            time: '23:00',
-            tempCelsius: 16,
-            iconUrl:"http://cdn.weatherapi.com/weather/64x64/day/116.png",
-            description: "Partly cloudy"
-          },
-        ],
+        maxTempCelsius: 30,
+        minTempCelsius: 15,
+        averageTempCelsius: 20,
+        iconUrl: 'http://cdn.weatherapi.com/weather/64x64/day/116.png',
+        description: 'Partly cloudy',
       },
       {
         date: '2023-08-05',
-        hourForecast: [
-          {
-            time: '22:00',
-            tempCelsius: 16,
-            iconUrl: "http://cdn.weatherapi.com/weather/64x64/day/116.png",
-            description: "Partly cloudy"
-          },
-          {
-            time: '23:00',
-            tempCelsius: 16,
-            iconUrl: "http://cdn.weatherapi.com/weather/64x64/day/116.png",
-            description: "Partly cloudy"
-          },
-        ],
+        maxTempCelsius: 30,
+        minTempCelsius: 15,
+        averageTempCelsius: 20,
+        iconUrl: 'http://cdn.weatherapi.com/weather/64x64/day/116.png',
+        description: 'Partly cloudy',
       },
     ],
   };

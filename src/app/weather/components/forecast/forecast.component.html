@@ -1,20 +1,22 @@
 <div>
     <div *ngFor="let day of vm.days">
         {{day.date}}
-        <div *ngFor="let hour of day.hourForecast">
             <div class="flex">
                 <div>
-                    {{hour.time}}
+                    Max temp {{day.maxTempCelsius}}
                 </div>
                 <div>
-                    {{hour.tempCelsius}}
+                    Min temp {{day.minTempCelsius}}
                 </div>
                 <div>
-                    <img [src]="hour.iconUrl" alt="" srcset="">
-                    {{hour.description}}
+                    Average temp {{day.averageTempCelsius}}
+                </div>
+                <div>
+                    <img [src]="day.iconUrl" alt="" srcset="">
+                    {{day.description}}
                 </div>
             </div>
-        </div>
+      
         ---
     </div>  
 </div>

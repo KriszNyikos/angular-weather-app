@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { createUrlForCurrentAndForecast, createUrlForAvailableCities } from "../helpers/url-helper";
-import { Observable } from "rxjs";
+import { Observable, interval, switchMap } from "rxjs";
 
 @Injectable()
 export class WeahterDataService {

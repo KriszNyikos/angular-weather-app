@@ -8,5 +8,5 @@ export  const createUrlForAvailableCities = (query: string): string => {
 }
 
 export  const createUrlForCurrentAndForecast = (query: string): string => {
-    return `${config.WEATHER_API_BASE_URL}${WeatherRequest.FORECAST}.json?key=${config.WEATHER_API_KEY}&q=${query}`
+    return `${config.WEATHER_API_BASE_URL}${WeatherRequest.FORECAST}.json?key=${config.WEATHER_API_KEY}&q=${query}&days=5` // after the weatherapi trial, it will be 3 days
 }

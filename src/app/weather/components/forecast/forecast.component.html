@@ -1,22 +1,54 @@
-<div>
+<div class="text-white rounded p-2 h-full">
     <div *ngFor="let day of vm.days">
-        {{day.date}}
-            <div class="flex">
-                <div>
-                    Max temp {{day.maxTempCelsius}}
+
+        <div class="flex flex-col mb-3 text-sm">
+            <div>
+                {{day.date}}
+            </div>
+
+            <div class="flex rounded text-xs justify-around p-2 bg-slate-700">
+
+                <div class="flex flex-col justify-center">
+                    <div>
+                        Max
+                    </div>
+
+                    <div>
+                        {{day.maxTempCelsius}} °
+                    </div>
+
                 </div>
-                <div>
-                    Min temp {{day.minTempCelsius}}
+
+                <div class="flex flex-col justify-center">
+                    <div>
+                        Min
+                    </div>
+
+                    <div>
+                        {{day.minTempCelsius}} °
+                    </div>
                 </div>
-                <div>
-                    Average temp {{day.averageTempCelsius}}
+
+                <div class="flex flex-col justify-center">
+                    <div>
+                        Average
+                    </div>
+
+                    <div>
+                        {{day.averageTempCelsius}} °
+                    </div>
                 </div>
-                <div>
-                    <img [src]="day.iconUrl" alt="" srcset="">
-                    {{day.description}}
+
+                <div class="w-12 flex flex-col justify-center">
+                    <img [src]="day.iconUrl" class="w-10">
+                    <div>
+                        {{day.description}}
+                    </div>
+
                 </div>
             </div>
-      
-        ---
-    </div>  
+
+
+        </div>
+    </div>
 </div>

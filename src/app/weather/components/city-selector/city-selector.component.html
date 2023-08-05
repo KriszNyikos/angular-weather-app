@@ -5,7 +5,7 @@
 
         <div *ngIf="cityList" class=" city-list absolute  pt-2 pr-2 pl-2 bg-slate-600 rounded w-72">
             <div *ngFor="let city of cityList.availableCities" (click)="onClickCityNameHandler(city.coordinates)">
-                <div class="cursor-pointer border rounded p-2 mb-2 text-white">
+                <div class="cursor-pointer rounded bg-slate-700  p-2 mb-2 text-white">
                     <div>
                         {{city.name}} ({{city.country}})
 

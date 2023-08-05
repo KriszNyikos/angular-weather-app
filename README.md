@@ -28,23 +28,23 @@
 #### Milestones for development
 
  Components
-- [] Actual day weather
-- [] Weather forecast
-- [] City selector input field
+- Actual day weather
+- Weather forecast
+- City selector input field
 
  Features
-- [x] The application should use the weather API https://www.weatherapi.com/
-- [] Actual weather of the selected city could be shown.
-- [] 3 day forecast is available for the user (in a free weather api plan)
-- [] Forecast and actual weather should be separate component.
-- [] The app should show extra data (humidity, wind, etc.)
-- [] User can type the selected city into the input field
-- [] If the user start typing a city, a list pop up under the input field with the available cities.
+- The application should use the weather API https://www.weatherapi.com/
+- Actual weather of the selected city could be shown.
+- 10 day forecast is available for the user (in a trial weather api plan)
+- Forecast and actual weather should be separate component.
+- The app should show extra data (humidity, wind, etc.)
+- User can type the selected city into the input field
+- If the user start typing a city, a list pop up under the input field with the available cities.
 
 #### Technical solutions
-- [x] Needs a service for weather HTTP requests (Forecast and available cities)
-- [] Needs a layer which is responsible for convert the data from the API to the approriate form.
-- [] Needs a folder where the modells are stored (Which is includes the interfaces and the helper functions for convertint.)
+- Needs a service for weather HTTP requests (Forecast and available cities)
+- Needs a layer which is responsible for convert the data from the API to the approriate form.
+- Needs a folder where the modells are stored (Which is includes the interfaces and the helper functions for convertint.)
 
 ---
 

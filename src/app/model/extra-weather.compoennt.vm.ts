@@ -12,7 +12,7 @@ export function mapCurrentWeatherApiRequestToExtraWeatherDataVM(
     currentWeatherData: any
   ): ExtraWeatherDataVM {
     return {
-      humidiy: currentWeatherData.humidiy,
+      humidiy: currentWeatherData.humidity,
       pressureMb: currentWeatherData.pressure_mb,
       windSpeedKph: currentWeatherData.wind_kph,
       windDirection: currentWeatherData.wind_dir,

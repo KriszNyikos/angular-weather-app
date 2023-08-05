@@ -7,7 +7,7 @@
         </div>
 
         <ng-container *ngIf="(vm$ | async) as vm">
-            <div class="border row-start-2 col-span-9 h-4/6">
+            <div class="row-start-2 col-span-9 h-4/6">
                 <app-current-weather [vm]="vm.currentWeather"></app-current-weather>
             </div>
         </ng-container>

@@ -7,10 +7,5 @@ import { CurrentWeatherVM } from 'src/app/model/current-weather.component.vm';
   styleUrls: ['./current-weather.component.scss']
 })
 export class CurrentWeatherComponent {
-  @Input() public vm: CurrentWeatherVM = {
-    cityName: 'London',
-    temperatureCelsius: 30,
-    iconUrl: "http://cdn.weatherapi.com/weather/64x64/day/116.png",
-    description: "Partly cloudy"
-  }
+  @Input() public vm?: CurrentWeatherVM
 }

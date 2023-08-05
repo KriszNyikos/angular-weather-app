@@ -1,16 +1,25 @@
-<div class="flex">
-    <div>
-        <div>
-            {{vm.cityName}}
+<div class="flex w-full h-full justify-around text-white">
+    <div class="flex flex-col justify-around align-middle">
+        <div class="text-center">
+            <div class="text-5xl ">
+                {{vm?.cityName}}
+            </div>
+            <div class="text-xl ">
+                {{vm?.cityCountry}}
+            </div>
+
         </div>
 
-        <div>
-            {{vm.temperatureCelsius}}
+        <div class="text-3xl text-center">
+            {{vm?.temperatureCelsius}} ° (Celsius)
         </div>
     </div>
 
-    <div>
-        <img [src]="vm.iconUrl" alt="" srcset="">
-        {{vm.description}}
+    <div class="flex flex-col justify-center align-middle">
+        <img [src]="vm?.iconUrl" class="w-56 h-56">
+        <div class="text-center text-xl">
+            {{vm?.description}}
+        </div>
+
     </div>
 </div>

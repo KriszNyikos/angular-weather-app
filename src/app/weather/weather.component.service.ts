@@ -4,7 +4,16 @@ import {
   WeatherComponentVM,
   mapFullForecastApiRequestToWeatherComponentVM,
 } from '../model/weather.component.vm';
-import { Subject, interval, startWith, switchMap } from 'rxjs';
+import {
+  BehaviorSubject,
+  Subject,
+  Subscription,
+  combineLatest,
+  interval,
+  startWith,
+  switchMap,
+  tap,
+} from 'rxjs';
 import {
   CitySelectorVM,
   mapWeatherApiCitiesToCitySelectorVM,
@@ -14,16 +23,21 @@ import {
 export class WeatherComponentService {
   constructor(public readonly weahterDataService: WeahterDataService) {}
   public vm$: Subject<WeatherComponentVM> = new Subject();
-  public selectedNameOrCoordinates: string = 'Budapest'; // The query could be a city name like London, and coordinates in string like 48.8567,2.3508
+  public selectedNameOrCoordinates$: Subject<string> = new BehaviorSubject(
+    'Zurich'
+  ); // The query could be a city name like London, and coordinates in string like 48.8567,2.3508
   public availableCities$: Subject<CitySelectorVM | null> = new Subject();
+  private weatherSubscription?: Subscription;
 
   public startInterval(): void {
-    interval(10000)
+    this.weatherSubscription = combineLatest([
+      interval(60000).pipe(startWith(0)), 
+      this.selectedNameOrCoordinates$,
+    ])
       .pipe(
-        startWith(0),
-        switchMap(() =>
+        switchMap(([, selectedNameOrCoordinates]) =>
           this.weahterDataService.getCurrentWeatherDataAndForecast(
-            this.selectedNameOrCoordinates
+            selectedNameOrCoordinates
           )
         )
       )
@@ -47,8 +61,8 @@ export class WeatherComponentService {
   }
 
   public setWeatherToSelectedCity(query: string): void {
-    this.resetAvailableCities()
-    this.selectedNameOrCoordinates = query;
+    this.resetAvailableCities();
+    this.selectedNameOrCoordinates$.next(query);
   }
 
   public resetAvailableCities(): void {

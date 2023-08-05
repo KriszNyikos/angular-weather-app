@@ -10,11 +10,7 @@ import { CitySelectorVM } from 'src/app/model/city-selector.component.vm';
 })
 export class CitySelectorComponent implements OnInit, OnDestroy{
 
-  @Input() cityList: CitySelectorVM = {
-    availableCities: [
-      {name: 'London', country: 'UK', coordinates: "51.52,-0.11"},
-    ]
-  }
+  @Input() cityList: CitySelectorVM | null = null
 
   public cityNameControl = new FormControl()
   private _citySubscripion?: Subscription
@@ -22,8 +18,8 @@ export class CitySelectorComponent implements OnInit, OnDestroy{
   @Output() cityNameSelected = new EventEmitter<string>()
 
   ngOnInit(): void {
-     this._citySubscripion = this.cityNameControl.valueChanges.pipe(debounceTime(500),distinctUntilChanged()).subscribe(cityName => {
-        this.cityNameChange.emit(cityName)
+     this._citySubscripion = this.cityNameControl.valueChanges.pipe(debounceTime(500),distinctUntilChanged()).subscribe((query: string) => {
+        this.cityNameChange.emit(query)
       })
   }
   

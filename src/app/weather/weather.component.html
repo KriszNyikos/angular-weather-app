@@ -3,7 +3,7 @@
     <div class="flex-1 w-2/3 flex flex-col">
 
         <div class="border row-end-1 col-start-1 col-end-7 h-16">
-            <app-city-selector></app-city-selector>
+            <app-city-selector (cityNameChange)="onCityNameChange($event)" (cityNameSelected)="onCityNameSelected($event)" [cityList]="availableCities$ | async"></app-city-selector>
         </div>
 
         <ng-container *ngIf="(vm$ | async) as vm">

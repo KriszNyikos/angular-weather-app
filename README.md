@@ -2,6 +2,7 @@
 You have to add an API key into the config.json file
 API key is provided by a weatherAPI after registration https://www.weatherapi.com/
 
+![image](https://github.com/KriszNyikos/angular-weather-app/assets/53120962/343bd56a-b64b-4b3a-b569-fab587f1daa8)
 
 #### Milestones for development
 
